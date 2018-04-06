@@ -46,15 +46,13 @@
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-  <!-- =============================================== -->
-
-
-
-  <!-- =============================================== -->
+  <?php
+    include "modulos/header.php";
+  ?>
 
   <!-- Content Wrapper. Contains page content -->
 </div>
 <!-- ./wrapper -->
-<script src="js/plantilla.js"></script>
+<script src="vistas/js/plantilla.js"></script>
 </body>
 </html>
