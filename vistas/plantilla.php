@@ -48,6 +48,9 @@
 <div class="wrapper">
   <?php
     include "modulos/header.php";
+    include "modulos/menu.php";
+    include "modulos/contenido.php";
+    include "modulos/footer.php";
   ?>
 
   <!-- Content Wrapper. Contains page content -->
