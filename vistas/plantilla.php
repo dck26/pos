@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +9,7 @@
   <title>Sistema de Inventario</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" href="vistas/img/plantilla/icono-negro.png">
  
  <!--======================================
  =              PLUGINS DE CSS            =
@@ -43,17 +47,51 @@
 =            CUERPO DEL DOCUMENTO            =
 ===========================================-->
 
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
+
   <?php
-    include "modulos/header.php";
-    include "modulos/menu.php";
-    include "modulos/contenido.php";
-    include "modulos/footer.php";
+
+  if(isset($_SESSION["iniciarSesion"]) && $_SESSION['iniciarSesion'] == "ok")
+    { 
+      echo '<div class="wrapper">';
+
+      include "modulos/header.php";
+
+      include "modulos/menu.php";
+      
+      if(isset($_GET["ruta"])) {
+
+        if($_GET["ruta"] == "inicio" ||
+           $_GET["ruta"] == "usuarios" ||
+           $_GET["ruta"] == "categorias" ||
+           $_GET["ruta"] == "productos" ||
+           $_GET["ruta"] == "clientes" ||
+           $_GET["ruta"] == "ventas" ||
+           $_GET["ruta"] == "crear-venta" ||
+           $_GET["ruta"] == "reportes" ||
+           $_GET["ruta"] == "salir") {
+          include "modulos/".$_GET["ruta"].".php";
+        }
+        else {
+          include "modulos/404.php";
+        }
+      }
+      else {
+        include "modulos/inicio.php";
+      }
+      
+      include "modulos/footer.php";
+
+      echo '</div>';
+    }
+
+    else {
+      include "modulos/login.php";
+    }
+    
+   
   ?>
 
-  <!-- Content Wrapper. Contains page content -->
 </div>
 <!-- ./wrapper -->
 <script src="vistas/js/plantilla.js"></script>
