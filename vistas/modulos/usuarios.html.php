@@ -40,7 +40,7 @@
             <thead>
 
               <tr>
-                <th style="width:10px"></th>
+                <th style="width:10px">#</th>
                 <th>Nombre</th>
                 <th>Usuario</th>
                 <th>Foto</th>
@@ -168,13 +168,6 @@
         <button type="submit" class="btn btn-primary" data-dismiss="modal">Guardar</button>
 
       </div>
-
-      <?php
-
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario -> ctrCrearUsuario();
-
-      ?>
 
     </form>
 
