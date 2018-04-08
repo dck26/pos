@@ -73,7 +73,6 @@
 
             </tbody>
 
-
           </table>
 
           </div>
@@ -98,84 +97,77 @@
 
       <form role="form" method="post" enctype="multipart/form-data">
 
-      <div class="modal-header" style="background:#3c8dbc; color:white;">
+        <div class="modal-header" style="background:#3c8dbc; color:white;">
 
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-        <h4 class="modal-title">Agregar usuario</h4>
-
-      </div>
-
-      <div class="modal-body">
-
-        <div class="box-body">
-
-          <!-- Entrada nombre -->
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-user"></i></span>
-              <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
-            </div>
-          </div>
-            <!-- Entrada usuario -->
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" required>
-              </div>
-          </div>
-            <!-- Entrada password -->
-          <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar password" required>
-              </div>
-          </div>
-            <!-- Entrada para seleccionar perfil -->
-          <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                <select class="form-control input-lg" name="nuevoPerfil">
-
-                  <option value="">Seleccionar perfil</option>
-                  <option value="Administrador">Administrador</option>
-                  <option value="Especial">Especial</option>
-                  <option value="Vendedor">Vendedor</option>
-
-                </select>
-              </div>
-          </div>
-          <!-- Entrada password -->
-          <div class="form-group">
-             <div class="panel">
-
-              <input type="file" id="nuevaFoto" name="nuevaFoto">
-              <p class="help-block">Peso máximo de la foto 200 MB</p>
-              <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="100px">
-
-             </div>
-          </div>
-
-
-          </div>
+          <h4 class="modal-title">Agregar usuario</h4>
 
         </div>
 
-      <div class="modal-footer">
+        <div class="modal-body">
+          <div class="box-body">
+            <!-- Entrada nombre -->
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
+              </div>
+            </div>
+              <!-- Entrada usuario -->
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                  <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" required>
+                </div>
+            </div>
+              <!-- Entrada password -->
+            <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar password" required>
+                </div>
+            </div>
+              <!-- Entrada para seleccionar perfil -->
+            <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                  <select class="form-control input-lg" name="nuevoPerfil">
 
-        <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salir</button>
+                    <option value="">Seleccionar perfil</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Especial">Especial</option>
+                    <option value="Vendedor">Vendedor</option>
 
-        <button type="submit" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                  </select>
+                </div>
+            </div>
+            <!-- Entrada password -->
+            <div class="form-group">
+               <div class="panel">
 
-      </div>
+                <input type="file" id="nuevaFoto" name="nuevaFoto">
+                <p class="help-block">Peso máximo de la foto 200 MB</p>
+                <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail" width="100px">
 
-      <?php
+               </div>
+            </div>
+            </div>
 
-        $crearUsuario = new ControladorUsuarios();
-        $crearUsuario -> ctrCrearUsuario();
+          </div>
 
-      ?>
+        <div class="modal-footer">
 
+          <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Salir</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+
+        </div>
+        <?php
+
+          $crearUsuario = new ControladorUsuarios();
+          $crearUsuario -> ctrCrearUsuario();
+
+        ?>
     </form>
 
     </div>

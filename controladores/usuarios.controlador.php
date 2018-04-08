@@ -36,15 +36,12 @@ class ControladorUsuarios {
 					echo '<br><div class="alert alert-danger">Error al ingresar. Vuelve a intentar.</div>';
 				
 				}
-
 			}
-
-
 		}
 	}
 
 	/*=======================================
-	=            INGRESO USUARIO            =
+	=            CREAR USUARIO            =
 	=======================================*/
 	
 	public function ctrCrearUsuario() {
